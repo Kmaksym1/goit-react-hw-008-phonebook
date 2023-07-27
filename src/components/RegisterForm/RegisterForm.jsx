@@ -16,7 +16,7 @@ import {
 // import * as yup from 'yup';
 import { useState } from 'react';
 import { useDispatch } from 'react-redux';
-import { register } from '../../reduxe/auth/auth-operation';
+import { register } from '../../reduxe/auth/operations';
 
 // const schema = yup.object().shape({
 //   name: yup.string().min(3).required(),

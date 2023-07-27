@@ -9,9 +9,10 @@ import theme from './Theme/theme';
 import PrivateRoute from './PrivateRoute';
 import { Loader } from './Loader/Loader';
 import { PublicRoute } from './PublicRoute';
-import { selectIsRefreshing } from 'reduxe/auth/auth-selectors';
+
 import { useSelector } from 'react-redux';
 import { SharedLayout } from './SharedLayout/SharedLayout';
+import { selectIsRefreshing } from 'reduxe/auth/selectors';
 
 const HomePage = lazy(() => import('./Pages/HomePage.jsx'));
 const RegisterPage = lazy(() => import('./Pages/RegisterPage'));

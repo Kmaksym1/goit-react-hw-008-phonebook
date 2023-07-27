@@ -31,10 +31,10 @@ const ContactList = () => {
     {contacts.length > 0 ? (
       <div className="contactsContainer">
         <ul className={css.ulContainer}>
-          {visibleContacts.map(({ name, id, phone }) => {
+          {visibleContacts.map(({ name, id, number }) => {
             return (
               <li key={id} className={css.liContainer}>
-                {name}: {phone}
+                {name}: {number}
                 <button
                   type="button"
                   className={css.delBtn}

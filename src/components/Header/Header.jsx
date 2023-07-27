@@ -10,10 +10,11 @@ import {
 import { Link } from 'react-router-dom';
 import { MoonIcon, SettingsIcon } from '@chakra-ui/icons';
 import { useSelector } from 'react-redux';
-import { selectIsLoggedIn } from 'reduxe/auth/auth-selectors';
+
 import { AuthMenu } from './AuthMenu/AuthMenu';
 import { UserMenu } from './UserMenu/UserMenu';
 import ContactsPage from 'components/Pages/ContactsPage';
+import { selectIsLoggedIn } from 'reduxe/auth/selectors';
 // import { logOut } from 'reduxe/auth/auth-operation';
 
 // import { Link as ReachLink } from "@reach/router"
