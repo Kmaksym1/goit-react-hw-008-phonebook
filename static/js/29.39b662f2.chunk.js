@@ -1,0 +1,2 @@
+"use strict";(self.webpackChunkreact_homework_template=self.webpackChunkreact_homework_template||[]).push([[29],{5029:function(e,r,t){t.r(r);t(2791);var o=t(1087),s=t(184);r.default=function(){return(0,s.jsxs)("div",{children:[(0,s.jsx)("h1",{children:"Oops! You seem to be lost."}),(0,s.jsxs)("p",{children:["You may start from our home page ",(0,s.jsx)(o.rU,{to:"/",children:"Home"})]})]})}}}]);
+//# sourceMappingURL=29.39b662f2.chunk.js.map
