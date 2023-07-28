@@ -1,21 +1,32 @@
-import { Button, Text } from '@chakra-ui/react';
-import { useSelector } from 'react-redux';
-import { selectUser } from 'reduxe/auth/selectors';
-// import { logOut } from 'reduxe/auth/auth-operation';
+import { Box, Container, Flex, Link, Text } from '@chakra-ui/react';
+import { useDispatch, useSelector } from 'react-redux';
+import { logOut } from 'reduxe/auth/auth-operation';
 
-// import { selectUserName } from 'reduxe/auth/auth-selectors';
-import { Wrapper } from './UserMenu.styled';
+import { selectUserName } from 'reduxe/auth/auth-selectors';
 
 export const UserMenu = () => {
-  // const dispatch = useDispatch();
-  const name = useSelector(selectUser);
+  const dispatch = useDispatch();
+  const name = useSelector(selectUserName);
   return (
-    <Wrapper>
-      <Text>Welcome, {name}!</Text>
-      <Button type="button" >
-      {/* onClick={() => dispatch(logOut())} */}
-        Logout
-      </Button>
-    </Wrapper>
+    <Box ml="30px" bg="Purple 600">
+      <Container maxW="container.lg" gap="30px">
+        <Flex h="5vh" justifyContent="center" align="center" gap="30px" >
+        <Text>Welcome, {name}!</Text>
+        <Link
+            to={`/login`}
+            as="a"
+            colorscheme="blue"
+            size="md"
+            _hover={{
+              textDecoration: "none"
+              
+            }}
+            onClick={() => dispatch(logOut())}
+          >
+            Log Out
+          </Link>
+        </Flex>
+      </Container>
+      </Box>
   );
 };

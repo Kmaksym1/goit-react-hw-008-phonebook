@@ -16,8 +16,7 @@ import {
 // import * as yup from 'yup';
 import { useState } from 'react';
 import { useDispatch } from 'react-redux';
-import { logIn } from 'reduxe/auth/operations';
-// import { logIn } from 'reduxe/auth/auth-operation';
+import { logIn } from 'reduxe/auth/auth-operation';
 
 // const schema = yup.object().shape({
 //   name: yup.string().min(3).required(),
@@ -36,8 +35,8 @@ const LoginForm = () => {
   }
 
   return (
-    <Flex  align="center" justify="center" h="30vh">
-      <Box  boxshadow='xl'colorscheme="teal"  p={6} rounded="md" w={80}>
+    <Flex  align="center" justify="center" mt="15%" >
+      <Box  boxshadow='xl'colorscheme="teal"  p={6} rounded="md" w={80} boxShadow="dark-lg">
         <Formik
           //   validationSchema={schema}
           initialValues={{
@@ -45,7 +44,6 @@ const LoginForm = () => {
             password: '',
           }}
          onSubmit={handleSubmit}
-         
         >
           {({ handleSubmit, errors, touched }) => (
             <Form onSubmit={handleSubmit}>

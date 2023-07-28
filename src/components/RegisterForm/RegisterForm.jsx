@@ -16,7 +16,7 @@ import {
 // import * as yup from 'yup';
 import { useState } from 'react';
 import { useDispatch } from 'react-redux';
-import { register } from '../../reduxe/auth/operations';
+import { register } from '../../reduxe/auth/auth-operation';
 
 // const schema = yup.object().shape({
 //   name: yup.string().min(3).required(),
@@ -35,8 +35,8 @@ const RegisterForm = () => {
   // };
 
   return (
-    <Flex align="center" justify="center" h="30vh">
-      <Box boxshadow="xl" colorscheme="teal" p={6} rounded="md" w={80}>
+    <Flex align="center" justify="center" alignContent="center" justifyContent="center" >
+      <Box boxshadow="xl" colorscheme="teal" p={6} rounded="md" w={80} boxShadow="dark-lg">
         <Formik
           //   validationSchema={schema}
           initialValues={{
