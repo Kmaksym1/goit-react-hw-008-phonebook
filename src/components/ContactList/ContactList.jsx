@@ -1,12 +1,13 @@
 import css from "./contactList.module.css";
 import { useDispatch, useSelector } from "react-redux";
-import { deleteContact, fetchAllContacts } from "reduxe/operations";
-import { useEffect } from "react";
-import { selectContacts, selectError, selectFilter, selectIsLoading } from "reduxe/selectors";
+import { deleteContact } from "reduxe/contacts/operations";
+// import { useEffect } from "react";
+import { selectContacts, selectError, selectFilter, selectIsLoading } from "reduxe/contacts/selectors";
 import { Loader } from "../Loader/Loader";
 import { useState } from "react";
 import { Button, Flex, List, ListItem, useColorModeValue } from "@chakra-ui/react";
 import { DeleteIcon } from "@chakra-ui/icons";
+
 
 const ContactList = () => {
   const [toDelete, setToDelete] = useState(null)
@@ -16,9 +17,10 @@ const ContactList = () => {
   const error = useSelector(selectError);
   
   const dispatch = useDispatch();
-  useEffect(() => {
-    dispatch(fetchAllContacts());
-  }, [dispatch]);
+  // useEffect(() => {
+  // console.log("contList")
+  //   dispatch(fetchAllContacts());
+  // }, [dispatch]);
 
   const filteredContacts = () => {
     return contacts.filter(({ name }) =>

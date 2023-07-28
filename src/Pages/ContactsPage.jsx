@@ -1,11 +1,13 @@
 import React from 'react';
 import { useEffect } from 'react';
 import { useDispatch } from 'react-redux';
-import { fetchAllContacts } from 'reduxe/operations';
+import { fetchAllContacts } from 'reduxe/contacts/operations';
 import ContactForm from 'components/ContactForm/ContactForm';
 import ContactList from 'components/ContactList/ContactList';
 import Filter from 'components/Filter/Filter';
 import { Box, Flex } from '@chakra-ui/react';
+
+
 
 const ContactsPage = () => {
   const dispatch = useDispatch();

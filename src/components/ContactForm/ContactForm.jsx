@@ -2,8 +2,8 @@ import { Formik, Form, Field } from 'formik';
 // import * as yup from 'yup';
 // import css from "../ContactForm/contactForm.module.css";
 import { useDispatch, useSelector } from 'react-redux';
-import { addContact } from 'reduxe/operations';
-import { selectContacts } from 'reduxe/selectors';
+import { addContact } from 'reduxe/contacts/operations';
+import { selectContacts } from 'reduxe/contacts/selectors';
 import { ToastContainer, toast } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
 import {
@@ -84,8 +84,7 @@ const ContactForm = () => {
                     fontSize="xl"
                     placeholder="Phone number"
                     variant="filled"
-                    
-                    
+
                     validate={value => {
                       if ((value.length < 9) &&(value.length<12) ) {
                         return 'Phone should be from 9 to 12 characters.';

@@ -12,11 +12,11 @@ import { selectIsRefreshing } from 'reduxe/auth/auth-selectors';
 import { SharedLayout } from './SharedLayout/SharedLayout';
 import { ROUTER } from './Routes/Routes';
 
-const HomePage = lazy(() => import('./Pages/HomePage.jsx'));
-const RegisterPage = lazy(() => import('./Pages/RegisterPage'));
-const LoginPage = lazy(() => import('./Pages/LoginPage'));
-const ContactsPage = lazy(() => import('./Pages/ContactsPage'));
-const NotFound = lazy(() => import('./Pages/NotFound'));
+const HomePage = lazy(() => import('../Pages/HomePage.jsx'));
+const RegisterPage = lazy(() => import('../Pages/RegisterPage'));
+const LoginPage = lazy(() => import('../Pages/LoginPage'));
+const ContactsPage = lazy(() => import('../Pages/ContactsPage'));
+const NotFound = lazy(() => import('../Pages/NotFound'));
 
 export const App = () => {
   
@@ -24,6 +24,7 @@ export const App = () => {
   const isRefreshing = useSelector(selectIsRefreshing);
 
   useEffect(() => {
+    console.log("appFetch")
     dispatch(fetchCurrentUser());
   }, [dispatch]);
 
